@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJ's Portfolio page</title>
+    <link rel="stylesheet" href="port.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav class="nav-container">
+                <p class="logo">SUMEDH</p>
+                <button class="nav-toggle" id="navToggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#resume">RESUME</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <P>Computer Engineer</P>
+                <h1>Hi,I'm <span>Sumedh</span><br>Jadhav </h1>
+            </div>
+        </div>
+    </div>
+    <!---------------------------about--------------------->
+    <div id="about">
+        <div class="ab">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="photos/aboutphoto.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Hi...I am Sumedh ,I am a Aspiring Computer Engineer Passionate About Innovation and
+                            Problem-Solving 💻</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('relevant courses')">Relevant</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Soft Skills</span><br>Communication::Presentation::Leardership Quality</li>
+                                <li><span>Technical Skills</span><br>C++::HTML::CSS::</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="relevant courses">
+                            <ul>
+                                <li><span>Courses:</span><br>1.DSA in C::2.Copmuter Organisation And Architecture::3.OPP
+                                    Programing</li>
+
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Hsc in Science</span><br>At Nutan Maratha College. </li>
+                                <li><span>Pursuing engineering </span><br>At SSBT College of engineering.</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------Projects---------->
+    <div id="projects">
+        <div class="pj">
+            <div class="container">
+                <div class="prj">
+                    <h1 class="sub-title">Projects</h1>
+                </div>
+                <div class="projects-list">
+                    <div>
+                        <h2>Old Architechure</h2>
+                        <a href="file:///C:/Users/nimbu/Downloads/architecture%20new.html">LEARN MORE</a>
+                    </div>
+                    <div>
+                        <h2>HISTORY OF CARS</h2>
+                        <a href="file:///C:/Users/nimbu/Downloads/cars%20N.html">LEARN MORE</a>
+                    </div>
+                    <div>
+                        <h2>ANCIENT STATUES</h2>
+                        <a href="file:///C:/Users/nimbu/Downloads/Statues.html">LEARN MORE</a>
+                    </div>
+                    <div>
+                        <h2>ANCIENT PAINTINGS</h2>
+                        <a href="file:///C:/Users/nimbu/Downloads/paints.html">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------------------------------RESUME--------------------------->
+    <div id="resume">
+        <div class="re">
+            <div class="container">
+                <div class="rs">
+                    <h1> RESUME </h1>
+                </div>
+                <div class="resume-list">
+                    <div>
+                        <a href="file:///C:/Users/HP/Downloads/Resume.pdf">Here Is My Resume </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------------------Contact--------------------------->
+    <div id="contact">
+        <div class="cont">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p>E-mail:contacttosj@here.com</p>
+                        <p>Contact NO.:****66**96</p>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cpy">
+        <div class="copyright">
+            <p>copyright @SUMEDH 15 SJ. made by sumedh </p>
+        </div>
+    </div>
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+</body>
+
+</html>
